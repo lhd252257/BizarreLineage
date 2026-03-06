@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: game.cheesechompers3d.net
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+Allow: /*.css$
+Allow: /*.js$
+
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+
+Sitemap: https://cheesechompers3d.net/sitemap.xml
+
+
+Crawl-delay: 10

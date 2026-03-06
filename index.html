@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizarre Lineage Wiki - Tier List, Codes & Best Builds (2026)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #5D4E37;
+            --secondary: #8B775B;
+            --accent: #FF8C42;
+            --accent-light: #FFB347;
+            --bg: #FDF6E3;
+            --card: #FFFBF5;
+            --border: rgba(255, 180, 100, 0.2);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FFF8F0 0%, #FDF6E3 50%, #F5EBD8 100%);
+            min-height: 100vh;
+            color: var(--primary);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 251, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FF8C42 0%, #FFB347 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .nav-btn {
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: none;
+            background: rgba(255, 180, 100, 0.1);
+            color: #8B775B;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 180, 100, 0.2);
+            color: #5D4E37;
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.active {
+            background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .page {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Cards */
+        .card {
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 40px rgba(139, 119, 91, 0.06);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            color: #8B775B;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Search */
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            border: 2px solid rgba(255, 180, 100, 0.3);
+            border-radius: 50px;
+            font-size: 16px;
+            background: #FFFBF5;
+            color: #5D4E37;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #FF8C42;
+            box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.15);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #A09078;
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px;
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 180, 100, 0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(139, 119, 91, 0.12);
+            border-color: rgba(255, 180, 100, 0.4);
+        }
+        
+        .feature-card:hover h3 {
+            color: #FF8C42;
+        }
+        
+        .feature-card:hover .arrow {
+            transform: translateX(5px);
+            color: #FFB347;
+        }
+        
+        .feature-card .arrow {
+            transition: all 0.3s;
+            color: #A09078;
+        }
+        
+        /* Build Planner Styles */
+        .planner-container {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 25px;
+        }
+        
+        @media (max-width: 900px) {
+            .planner-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .selection-area h3 {
+            margin-bottom: 15px;
+            color: #5D4E37;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .option-btn {
+            padding: 15px 10px;
+            border: 2px solid rgba(255, 180, 100, 0.2);
+            border-radius: 12px;
+            background: #FFFBF5;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .option-btn:hover {
+            border-color: #FFB347;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 140, 66, 0.1);
+        }
+        
+        .option-btn.selected {
+            border-color: #FF8C42;
+            background: rgba(255, 140, 66, 0.1);
+            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2);
+        }
+        
+        .option-btn .name {
+            font-weight: 600;
+            color: #5D4E37;
+            font-size: 14px;
+        }
+        
+        .option-btn .tier {
+            font-size: 11px;
+            color: #8B775B;
+            margin-top: 6px;
+        }
+        
+        /* Score Panel */
+        .score-panel {
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 20px;
+            padding: 25px;
+            border: 2px solid rgba(255, 180, 100, 0.2);
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+        
+        .score-panel h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #5D4E37;
+        }
+        
+        .total-score {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .total-score .number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .total-score .label {
+            color: #8B775B;
+            font-size: 14px;
+        }
+        
+        .score-bar {
+            margin-bottom: 15px;
+        }
+        
+        .score-bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        .score-bar-header .label {
+            color: #5D4E37;
+            font-weight: 500;
+        }
+        
+        .score-bar-header .value {
+            color: #FF8C42;
+            font-weight: bold;
+        }
+        
+        .score-bar-bg {
+            height: 10px;
+            background: rgba(255, 180, 100, 0.15);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .score-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF8C42 0%, #FFB347 100%);
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+        
+        .build-summary {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 180, 100, 0.2);
+        }
+        
+        .build-summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .build-summary-item .label {
+            color: #8B775B;
+        }
+        
+        .build-summary-item .value {
+            color: #5D4E37;
+            font-weight: 600;
+        }
+        
+        /* Tier List Styles */
+        .tier-section {
+            margin-bottom: 30px;
+        }
+        
+        .tier-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .tier-badge {
+            padding: 10px 24px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .tier-s { background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%); }
+        .tier-a { background: #A09078; }
+        .tier-b { background: #8B7355; }
+        .tier-c { background: #9E9E9E; }
+        
+        .tier-stands {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .tier-stand-card {
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 16px;
+            padding: 20px;
+            border: 2px solid rgba(255, 180, 100, 0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(139, 119, 91, 0.05);
+        }
+        
+        .tier-stand-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 119, 91, 0.1);
+            border-color: rgba(255, 180, 100, 0.3);
+        }
+        
+        .tier-stand-card .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Stand Cards Grid */
+        .stands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .stand-card {
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 180, 100, 0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .stand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(139, 119, 91, 0.12);
+        }
+        
+        .stand-card-banner {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .stand-card-info {
+            padding: 20px;
+        }
+        
+        .stand-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .stand-card-header h4 {
+            font-size: 1.1rem;
+        }
+        
+        .stand-tier-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        /* Codes Section */
+        .code-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .code-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            background: #FFFBF5;
+            border-radius: 14px;
+            border-left: 4px solid #2ecc71;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .code-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.1);
+        }
+        
+        .code-text {
+            background: rgba(255, 140, 66, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #FF8C42;
+            font-weight: bold;
+            font-family: monospace;
+        }
+        
+        .code-status {
+            background: #2ecc71;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* Guides Grid */
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .guide-card {
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 16px;
+            padding: 25px;
+            border: 2px solid rgba(255, 180, 100, 0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 119, 91, 0.1);
+            border-color: rgba(255, 180, 100, 0.3);
+        }
+        
+        .guide-card:hover h4 {
+            color: #FF8C42;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: rgba(255, 180, 100, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 180, 100, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(139, 119, 91, 0.08);
+        }
+        
+        .faq-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item h4 i {
+            color: #FF8C42;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #FFFBF5 0%, #FFF5E6 100%);
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        
+        footer .logo {
+            margin-bottom: 15px;
+        }
+        
+        footer .links {
+            margin-bottom: 15px;
+        }
+        
+        footer .links a {
+            color: #8B775B;
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        
+        footer .links a:hover {
+            color: #FF8C42;
+        }
+        
+        footer .disclaimer {
+            color: #A09078;
+            font-size: 13px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .planner-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .score-panel {
+                position: relative;
+                top: 0;
+            }
+            
+            .option-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="showPage('home')">Bizarre Lineage</div>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="showPage('home')">Home</button>
+            <button class="nav-btn" onclick="showPage('planner')">Build Planner</button>
+            <button class="nav-btn" onclick="showPage('tierlist')">Tier List</button>
+            <button class="nav-btn" onclick="showPage('stands')">Stands</button>
+            <button class="nav-btn" onclick="showPage('codes')">Codes</button>
+            <button class="nav-btn" onclick="showPage('guides')">Guides</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1><span>Bizarre Lineage</span> Tier List & Codes</h1>
+                <p>Find the best Stands, optimal build combos, and active codes for PvP and PvE. Don't waste your Stand Arrow.</p>
+                
+                <!-- Play on Roblox Button -->
+                <div style="margin: 30px 0;">
+                    <button onclick="openRobloxModal()" class="play-roblox-btn" style="
+                        background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+                        color: white;
+                        border: none;
+                        padding: 16px 40px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        box-shadow: 0 4px 20px rgba(255, 140, 66, 0.4);
+                        transition: all 0.3s;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                    " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 30px rgba(255, 140, 66, 0.5)'" 
+                       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 20px rgba(255, 140, 66, 0.4)'">
+                        <span style="font-size: 20px;">▶</span> Play on Roblox
+                    </button>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search for a Stand (e.g. Whitesnake, Made in Heaven)...">
+                </div>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" onclick="showPage('planner')">
+                        <div>
+                            <h3>Build Planner</h3>
+                            <p style="color: #8B775B; font-size: 14px;">Create and score your setup</p>
+                        </div>
+                        <i class="fa fa-arrow-right arrow"></i>
+                    </div>
+                    <div class="feature-card" onclick="showPage('tierlist')">
+                        <div>
+                            <h3>Tier List</h3>
+                            <p style="color: #8B775B; font-size: 14px;">Current meta rankings</p>
+                        </div>
+                        <i class="fa fa-arrow-right arrow"></i>
+                    </div>
+                    <div class="feature-card" onclick="showPage('codes')">
+                        <div>
+                            <h3>Codes</h3>
+                            <p style="color: #8B775B; font-size: 14px;">Free Arrows, Rokakakas & Cash</p>
+                        </div>
+                        <i class="fa fa-arrow-right arrow"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- How it Works -->
+            <div class="card">
+                <h2 style="margin-bottom: 25px;">How the Build Planner Works</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="padding: 25px; background: rgba(255,180,100,0.1); border-radius: 16px;">
+                        <div class="step-number">1</div>
+                        <h4 style="margin: 15px 0 10px;">Pick a Stand</h4>
+                        <p style="color: #8B775B; font-size: 14px;">Choose from 17 Stands — from S-tier Made in Heaven to beginner-friendly options.</p>
+                    </div>
+                    <div style="padding: 25px; background: rgba(255,180,100,0.1); border-radius: 16px;">
+                        <div class="step-number">2</div>
+                        <h4 style="margin: 15px 0 10px;">Select Style & Sub</h4>
+                        <p style="color: #8B775B; font-size: 14px;">Pair your Stand with a fighting style and sub-ability to shape your build.</p>
+                    </div>
+                    <div style="padding: 25px; background: rgba(255,180,100,0.1); border-radius: 16px;">
+                        <div class="step-number">3</div>
+                        <h4 style="margin: 15px 0 10px;">Get Your Score</h4>
+                        <p style="color: #8B775B; font-size: 14px;">See your build's 5-dimension score and compare against other builds.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trending Stands -->
+            <div class="card">
+                <h2 style="margin-bottom: 20px;">Best Bizarre Lineage Stands (Trending)</h2>
+                <div class="stands-grid" id="trending-stands"></div>
+            </div>
+        </div>
+
+        <!-- BUILD PLANNER PAGE -->
+        <div id="planner" class="page">
+            <div class="card" style="margin-bottom: 20px;">
+                <h2>Build Planner</h2>
+                <p style="color: #8B775B;">Create your optimal build and see the 5-dimension score breakdown.</p>
+            </div>
+            
+            <div class="planner-container">
+                <div class="selection-area">
+                    <!-- Step 1: Select Stand -->
+                    <div class="card">
+                        <h3><span class="step-number">1</span> Select Stand</h3>
+                        <div class="option-grid" id="stand-options"></div>
+                    </div>
+                    
+                    <!-- Step 2: Select Style -->
+                    <div class="card">
+                        <h3><span class="step-number">2</span> Select Fighting Style</h3>
+                        <div class="option-grid" id="style-options"></div>
+                    </div>
+                    
+                    <!-- Step 3: Select Sub -->
+                    <div class="card">
+                        <h3><span class="step-number">3</span> Select Sub-Ability</h3>
+                        <div class="option-grid" id="sub-options"></div>
+                    </div>
+                </div>
+                
+                <!-- Score Panel -->
+                <div class="score-panel">
+                    <h3>Build Score</h3>
+                    <div class="total-score">
+                        <div class="number" id="total-score">0</div>
+                        <div class="label">Total Score</div>
+                    </div>
+                    
+                    <div id="score-bars">
+                        <div class="score-bar">
+                            <div class="score-bar-header">
+                                <span class="label">PvP</span>
+                                <span class="value" id="pvp-score-display">0/100</span>
+                            </div>
+                            <div class="score-bar-bg">
+                                <div class="score-bar-fill" id="pvp-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-bar-header">
+                                <span class="label">PvE</span>
+                                <span class="value" id="pve-score-display">0/100</span>
+                            </div>
+                            <div class="score-bar-bg">
+                                <div class="score-bar-fill" id="pve-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-bar-header">
+                                <span class="label">Survival</span>
+                                <span class="value" id="survival-score-display">0/100</span>
+                            </div>
+                            <div class="score-bar-bg">
+                                <div class="score-bar-fill" id="survival-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-bar-header">
+                                <span class="label">Mobility</span>
+                                <span class="value" id="mobility-score-display">0/100</span>
+                            </div>
+                            <div class="score-bar-bg">
+                                <div class="score-bar-fill" id="mobility-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-bar-header">
+                                <span class="label">Cost Efficiency</span>
+                                <span class="value" id="cost-score-display">0/100</span>
+                            </div>
+                            <div class="score-bar-bg">
+                                <div class="score-bar-fill" id="cost-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="build-summary" id="build-summary">
+                        <div class="build-summary-item">
+                            <span class="label">Stand:</span>
+                            <span class="value" id="summary-stand">None</span>
+                        </div>
+                        <div class="build-summary-item">
+                            <span class="label">Style:</span>
+                            <span class="value" id="summary-style">None</span>
+                        </div>
+                        <div class="build-summary-item">
+                            <span class="label">Sub:</span>
+                            <span class="value" id="summary-sub">None</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIER LIST PAGE -->
+        <div id="tierlist" class="page">
+            <div class="card">
+                <h2>Bizarre Lineage Tier List</h2>
+                <p style="color: #8B775B; margin-top: 10px;">Current meta rankings for all Stands. Filter by overall power, player elimination (PvP), or optimal grinding speeds (PvE).</p>
+            </div>
+            
+            <div id="tier-list-container"></div>
+        </div>
+
+        <!-- STANDS PAGE -->
+        <div id="stands" class="page">
+            <div class="card">
+                <h2>All Stands</h2>
+                <p style="color: #8B775B; margin-top: 10px;">Browse all available Stands in Bizarre Lineage.</p>
+            </div>
+            <div class="stands-grid" id="all-stands"></div>
+        </div>
+
+        <!-- CODES PAGE -->
+        <div id="codes" class="page">
+            <div class="card">
+                <h2>Active Codes</h2>
+                <p style="color: #8B775B; margin-top: 10px;">Redeem these codes for free Stand Arrows, Rokakakas, Cash, and XP boosts!</p>
+            </div>
+            
+            <div class="card">
+                <div class="code-list">
+                    <div class="code-item">
+                        <div>
+                            <span class="code-text">THANKS100K</span>
+                            <span style="color: #5D4E37; margin-left: 15px;">Free Lucky Arrow + 10k Cash</span>
+                        </div>
+                        <span class="code-status">Active</span>
+                    </div>
+                    <div class="code-item">
+                        <div>
+                            <span class="code-text">UPDATE2</span>
+                            <span style="color: #5D4E37; margin-left: 15px;">2x XP Boost (1 Hour)</span>
+                        </div>
+                        <span class="code-status">Active</span>
+                    </div>
+                    <div class="code-item">
+                        <div>
+                            <span class="code-text">FIXES</span>
+                            <span style="color: #5D4E37; margin-left: 15px;">Rokakaka Fruit x3</span>
+                        </div>
+                        <span class="code-status">Active</span>
+                    </div>
+                    <div class="code-item">
+                        <div>
+                            <span class="code-text">NEWYEAR2026</span>
+                            <span style="color: #5D4E37; margin-left: 15px;">Stand Arrow x5 + Cash</span>
+                        </div>
+                        <span class="code-status">Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUIDES PAGE -->
+        <div id="guides" class="page">
+            <div class="card">
+                <h2>📚 Popular Guides</h2>
+                <p style="color: #8B775B; margin-top: 10px;">Learn how to master your Stands and dominate in PvP.</p>
+            </div>
+            
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Whitesnake Build Guide</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Master the best PvP build with Boxing and Hamon combo.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Made in Heaven Guide</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Unlock the ultimate speed Stand and dominate the arena.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Leveling Guide (1-50)</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Fastest way to level up and unlock Prestige mode.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Boxing Style Guide</h4>
+                    <p style="color: #8B775B; font-size: 14px;">The most versatile fighting style for PvP combat.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Hamon Sub-Ability</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Complete guide to the Ripple energy breathing technique.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">Prestige Requirements</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Everything you need to know about Prestige system.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">The World High Voltage</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Unlock the true potential of The World Stand.</p>
+                </div>
+                <div class="guide-card">
+                    <h4 style="margin-bottom: 10px;">King Crimson Build</h4>
+                    <p style="color: #8B775B; font-size: 14px;">Master time skip and epitaph abilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Roblox Modal -->
+    <div id="robloxModal" style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    " onclick="closeRobloxModal(event)">
+        <div style="
+            background: linear-gradient(145deg, #FFFBF5 0%, #FFF8F0 100%);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 180, 100, 0.3);
+            animation: modalFadeIn 0.3s ease;
+        " onclick="event.stopPropagation()">
+            <div style="
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+                border-radius: 50%;
+                margin: 0 auto 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 36px;
+                color: white;
+            ">▶</div>
+            <h3 style="color: #5D4E37; margin-bottom: 15px; font-size: 1.5rem;">Play Bizarre Lineage</h3>
+            <p style="color: #8B775B; margin-bottom: 30px; line-height: 1.6;">
+                You're about to be redirected to Roblox to play Bizarre Lineage. Join the adventure now!
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button onclick="closeRobloxModal()" style="
+                    padding: 12px 28px;
+                    border: 2px solid rgba(255, 180, 100, 0.3);
+                    background: transparent;
+                    color: #8B775B;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    transition: all 0.3s;
+                " onmouseover="this.style.borderColor='#FF8C42'; this.style.color='#FF8C42'" 
+                   onmouseout="this.style.borderColor='rgba(255, 180, 100, 0.3)'; this.style.color='#8B775B'">
+                    Cancel
+                </button>
+                <button onclick="goToRoblox()" style="
+                    padding: 12px 28px;
+                    background: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+                    transition: all 0.3s;
+                " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255, 140, 66, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255, 140, 66, 0.3)'">
+                    Open Roblox
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+
+    <footer>
+        <div class="logo">Bizarre Lineage</div>
+        <div class="links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('planner')">Build Planner</a>
+            <a href="#" onclick="showPage('tierlist')">Tier List</a>
+            <a href="#" onclick="showPage('codes')">Codes</a>
+        </div>
+        <div class="disclaimer">
+            © 2026 Bizarre Lineage Wiki. Fan-made tools site.<br>
+            Not affiliated with Roblox or the game developers.
+        </div>
+    </footer>
+
+    <script>
+        // Data
+        const stands = [
+            { id: 'whitesnake', name: 'Whitesnake', tier: 'S', color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', pvp: 96, pve: 74, survival: 72, mobility: 68, cost: 65, bestStyle: 'boxing', damage: 'S', sustain: 'B' },
+            { id: 'mih', name: 'Made in Heaven', tier: 'S', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', pvp: 98, pve: 68, survival: 76, mobility: 100, cost: 45, bestStyle: 'kendo', damage: 'S', sustain: 'C' },
+            { id: 'sp', name: 'Star Platinum', tier: 'S', color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', pvp: 94, pve: 86, survival: 82, mobility: 72, cost: 68, bestStyle: 'boxing', damage: 'S', sustain: 'B' },
+            { id: 'tw', name: 'The World', tier: 'A', color: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)', pvp: 90, pve: 82, survival: 78, mobility: 62, cost: 72, bestStyle: 'vampire', damage: 'A', sustain: 'B' },
+            { id: 'cmoon', name: 'C-Moon', tier: 'S', color: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)', pvp: 95, pve: 76, survival: 74, mobility: 70, cost: 58, bestStyle: 'boxing', damage: 'S', sustain: 'C' },
+            { id: 'kc', name: 'King Crimson', tier: 'A', color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)', pvp: 91, pve: 74, survival: 70, mobility: 78, cost: 70, bestStyle: 'boxing', damage: 'A', sustain: 'B' },
+            { id: 'kq', name: 'Killer Queen', tier: 'A', color: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)', pvp: 87, pve: 84, survival: 80, mobility: 58, cost: 74, bestStyle: 'vampire', damage: 'B', sustain: 'A' },
+            { id: 'cd', name: 'Crazy Diamond', tier: 'B', color: 'linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)', pvp: 78, pve: 92, survival: 88, mobility: 64, cost: 82, bestStyle: 'boxing', damage: 'B', sustain: 'S' },
+            { id: 'ge', name: 'Gold Experience', tier: 'B', color: 'linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)', pvp: 75, pve: 90, survival: 84, mobility: 68, cost: 80, bestStyle: 'kendo', damage: 'B', sustain: 'A' },
+            { id: 'wr', name: 'Weather Report', tier: 'A', color: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)', pvp: 88, pve: 86, survival: 74, mobility: 76, cost: 68, bestStyle: 'kendo', damage: 'A', sustain: 'A' },
+            { id: 'anubis', name: 'Anubis', tier: 'B', color: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)', pvp: 83, pve: 78, survival: 68, mobility: 74, cost: 88, bestStyle: 'kendo', damage: 'A', sustain: 'C' },
+            { id: 'mr', name: "Magician's Red", tier: 'C', color: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)', pvp: 68, pve: 74, survival: 64, mobility: 60, cost: 92, bestStyle: 'hamon', damage: 'B', sustain: 'B' }
+        ];
+
+        const styles = [
+            { id: 'boxing', name: 'Boxing', pvp: 8, pve: 6, survival: 8, mobility: 4, cost: 0 },
+            { id: 'kendo', name: 'Kendo', pvp: 6, pve: 8, survival: 5, mobility: 6, cost: 0 },
+            { id: 'vampire', name: 'Vampire', pvp: 9, pve: 5, survival: 10, mobility: 7, cost: 0 },
+            { id: 'hamon', name: 'Hamon', pvp: 5, pve: 10, survival: 7, mobility: 5, cost: 0 }
+        ];
+
+        const subs = [
+            { id: 'hamon', name: 'Hamon', pvp: 4, pve: 8, survival: 6, mobility: 3, cost: 0 },
+            { id: 'spin', name: 'Spin', pvp: 6, pve: 5, survival: 4, mobility: 8, cost: 0 },
+            { id: 'cyborg', name: 'Cyborg', pvp: 5, pve: 6, survival: 8, mobility: 2, cost: 0 },
+            { id: 'vampire', name: 'Vampire', pvp: 7, pve: 4, survival: 7, mobility: 5, cost: 0 }
+        ];
+
+        // State
+        let selectedStand = null;
+        let selectedStyle = null;
+        let selectedSub = null;
+
+        // Initialize
+        function init() {
+            renderTrendingStands();
+            renderStandOptions();
+            renderStyleOptions();
+            renderSubOptions();
+            renderTierList();
+            renderAllStands();
+        }
+
+        // Page Navigation
+        function showPage(pageName) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(pageName).classList.add('active');
+            event.target.closest('.nav-btn')?.classList.add('active');
+            
+            // Update nav buttons
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(pageName)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Functions
+        function renderTrendingStands() {
+            const container = document.getElementById('trending-stands');
+            const trending = stands.filter(s => ['S', 'A'].includes(s.tier)).slice(0, 6);
+            container.innerHTML = trending.map(stand => createStandCard(stand)).join('');
+        }
+
+        function renderAllStands() {
+            const container = document.getElementById('all-stands');
+            container.innerHTML = stands.map(stand => createStandCard(stand)).join('');
+        }
+
+        function createStandCard(stand) {
+            const tierColor = stand.tier === 'S' ? '#FF8C42' : stand.tier === 'A' ? '#A09078' : '#8B7355';
+            return `
+                <div class="stand-card" onclick="selectStandFromCard('${stand.id}')">
+                    <div class="stand-card-banner" style="background: ${stand.color};"></div>
+                    <div class="stand-card-info">
+                        <div class="stand-card-header">
+                            <h4>${stand.name}</h4>
+                            <span class="stand-tier-badge" style="background: ${tierColor};">${stand.tier} Tier</span>
+                        </div>
+                        <p style="color: #8B775B; font-size: 13px;">PvP Score: <strong style="color: #FFB347;">${stand.pvp}/100</strong></p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderStandOptions() {
+            const container = document.getElementById('stand-options');
+            container.innerHTML = stands.map(stand => `
+                <div class="option-btn ${selectedStand?.id === stand.id ? 'selected' : ''}" onclick="selectStand('${stand.id}')">
+                    <div class="name">${stand.name}</div>
+                    <div class="tier">${stand.tier} Tier</div>
+                </div>
+            `).join('');
+        }
+
+        function renderStyleOptions() {
+            const container = document.getElementById('style-options');
+            container.innerHTML = styles.map(style => `
+                <div class="option-btn ${selectedStyle?.id === style.id ? 'selected' : ''}" onclick="selectStyle('${style.id}')">
+                    <div class="name">${style.name}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderSubOptions() {
+            const container = document.getElementById('sub-options');
+            container.innerHTML = subs.map(sub => `
+                <div class="option-btn ${selectedSub?.id === sub.id ? 'selected' : ''}" onclick="selectSub('${sub.id}')">
+                    <div class="name">${sub.name}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderTierList() {
+            const container = document.getElementById('tier-list-container');
+            const tiers = ['S', 'A', 'B'];
+            const tierNames = { S: 'God Tier - Dominates the meta', A: 'Excellent - Strong picks', B: 'Good - Viable options' };
+            
+            container.innerHTML = tiers.map(tier => {
+                const tierStands = stands.filter(s => s.tier === tier);
+                return `
+                    <div class="tier-section">
+                        <div class="tier-header">
+                            <span class="tier-badge tier-${tier.toLowerCase()}">${tier} Tier</span>
+                            <span style="color: #8B775B;">${tierNames[tier]}</span>
+                        </div>
+                        <div class="tier-stands">
+                            ${tierStands.map(stand => `
+                                <div class="tier-stand-card" onclick="selectStandFromCard('${stand.id}')">
+                                    <div style="font-weight: 600; color: #5D4E37; font-size: 15px; margin-bottom: 10px;">${stand.name}</div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                                        <span style="color: #8B775B;">Damage:</span>
+                                        <span style="color: #FF8C42; font-weight: 600;">${stand.damage || 'A'}</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                                        <span style="color: #8B775B;">Sustain:</span>
+                                        <span style="color: #FF8C42; font-weight: 600;">${stand.sustain || 'B'}</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                        <span style="color: #8B775B;">Best with:</span>
+                                        <span style="color: #5D4E37; font-weight: 600; text-transform: capitalize;">${stand.bestStyle || 'boxing'}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Selection Functions
+        function selectStand(standId) {
+            selectedStand = stands.find(s => s.id === standId);
+            renderStandOptions();
+            updateScore();
+            updateSummary();
+        }
+
+        function selectStandFromCard(standId) {
+            selectStand(standId);
+            showPage('planner');
+        }
+
+        function selectStyle(styleId) {
+            selectedStyle = styles.find(s => s.id === styleId);
+            renderStyleOptions();
+            updateScore();
+            updateSummary();
+        }
+
+        function selectSub(subId) {
+            selectedSub = subs.find(s => s.id === subId);
+            renderSubOptions();
+            updateScore();
+            updateSummary();
+        }
+
+        // Score Calculation with Animation
+        let currentScores = { pvp: 0, pve: 0, survival: 0, mobility: 0, cost: 0, total: 0 };
+        
+        function animateValue(id, start, end, duration, suffix = '') {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            const minTimer = 50;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            stepTime = Math.max(stepTime, minTimer);
+            
+            let startTime = new Date().getTime();
+            let endTime = startTime + duration;
+            let timer;
+            
+            function run() {
+                let now = new Date().getTime();
+                let remaining = Math.max((endTime - now) / duration, 0);
+                let value = Math.round(end - (remaining * range));
+                obj.textContent = value + suffix;
+                if (value == end) {
+                    clearInterval(timer);
+                }
+            }
+            
+            timer = setInterval(run, stepTime);
+            run();
+        }
+        
+        function updateScore() {
+            if (!selectedStand) {
+                resetScores();
+                return;
+            }
+
+            let pvp = selectedStand.pvp;
+            let pve = selectedStand.pve;
+            let survival = selectedStand.survival;
+            let mobility = selectedStand.mobility;
+            let cost = selectedStand.cost;
+
+            if (selectedStyle) {
+                pvp += selectedStyle.pvp;
+                pve += selectedStyle.pve;
+                survival += selectedStyle.survival;
+                mobility += selectedStyle.mobility;
+            }
+
+            if (selectedSub) {
+                pvp += selectedSub.pvp;
+                pve += selectedSub.pve;
+                survival += selectedSub.survival;
+                mobility += selectedSub.mobility;
+            }
+
+            // Cap at 100
+            pvp = Math.min(pvp, 100);
+            pve = Math.min(pve, 100);
+            survival = Math.min(survival, 100);
+            mobility = Math.min(mobility, 100);
+
+            const total = Math.round((pvp + pve + survival + mobility + cost) / 5);
+
+            // Animate display
+            animateValue('total-score', currentScores.total, total, 400);
+            animateValue('pvp-score-display', currentScores.pvp, pvp, 300, '/100');
+            animateValue('pve-score-display', currentScores.pve, pve, 300, '/100');
+            animateValue('survival-score-display', currentScores.survival, survival, 300, '/100');
+            animateValue('mobility-score-display', currentScores.mobility, mobility, 300, '/100');
+            animateValue('cost-score-display', currentScores.cost, cost, 300, '/100');
+
+            // Update bars with animation
+            document.getElementById('pvp-bar').style.width = `${pvp}%`;
+            document.getElementById('pve-bar').style.width = `${pve}%`;
+            document.getElementById('survival-bar').style.width = `${survival}%`;
+            document.getElementById('mobility-bar').style.width = `${mobility}%`;
+            document.getElementById('cost-bar').style.width = `${cost}%`;
+            
+            // Store current scores
+            currentScores = { pvp, pve, survival, mobility, cost, total };
+        }
+
+        function resetScores() {
+            document.getElementById('total-score').textContent = '0';
+            ['pvp', 'pve', 'survival', 'mobility', 'cost'].forEach(stat => {
+                document.getElementById(`${stat}-score-display`).textContent = '0/100';
+                document.getElementById(`${stat}-bar`).style.width = '0%';
+            });
+            currentScores = { pvp: 0, pve: 0, survival: 0, mobility: 0, cost: 0, total: 0 };
+        }
+
+        function updateSummary() {
+            document.getElementById('summary-stand').textContent = selectedStand?.name || 'None';
+            document.getElementById('summary-style').textContent = selectedStyle?.name || 'None';
+            document.getElementById('summary-sub').textContent = selectedSub?.name || 'None';
+        }
+
+        // Initialize on load
+        window.onload = init;
+
+        // Roblox Modal Functions
+        function openRobloxModal() {
+            document.getElementById('robloxModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRobloxModal(event) {
+            if (!event || event.target.id === 'robloxModal' || event.target.innerText === 'Cancel') {
+                document.getElementById('robloxModal').style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        function goToRoblox() {
+            window.open('https://www.roblox.com/games/14890802310/Bizarre-Lineage', '_blank');
+            closeRobloxModal();
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeRobloxModal();
+            }
+        });
+    </script>
+</body>
+</html>
